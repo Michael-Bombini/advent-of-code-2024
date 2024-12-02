@@ -27,6 +27,31 @@ public class Day1
         Console.WriteLine("Day 1, Part 1: " + total);
     }
 
+    public static void Part2()
+    {
+        var (listA, listB) = GetInputsLists();
+
+        var dict = new Dictionary<int, int>();
+
+        foreach (var number in listB)
+        {
+            if (!dict.TryAdd(number, 1))
+            {
+                dict[number]++;
+            }
+        }
+
+        var total = 0;
+
+        for (int i = 0; i < listA.Count; i++)
+        {
+            var dictElement = dict.GetValueOrDefault(listA[i], 0);
+            total += listA[i] * dictElement;
+        }
+
+        Console.WriteLine("Day 1, Part 2: " + total);
+    }
+
     private static (List<int> listA, List<int> listB) GetInputsLists()
     {
         var lines = File.ReadAllLines("./inputs/day1.txt");
@@ -46,33 +71,5 @@ public class Day1
         listA.Sort();
         listB.Sort();
         return (listA, listB);
-    }
-
-    public static void Part2()
-    {
-        var (listA, listB) = GetInputsLists();
-
-        // we need a hashmap like number: number of times it appears 
-        //this needs to be based on ListB
-
-        var dict = new Dictionary<int, int>();
-
-        foreach (var number in listB)
-        {
-            if (!dict.TryAdd(number, 1))
-            {
-                dict[number]++;
-            }
-        }
-
-        var total = 0;
-
-        for (int i = 0; i < listA.Count; i++)
-        {
-            var dictElement = dict.GetValueOrDefault(listA[i], 0);
-            total += listA[i] * dictElement;
-        }
-        
-        Console.WriteLine("Day 1, Part 2: " + total);
     }
 }
