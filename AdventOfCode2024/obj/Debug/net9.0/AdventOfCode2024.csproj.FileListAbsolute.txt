@@ -13,3 +13,4 @@ C:\Users\kuroc\Desktop\Projects\AdventOfCode2024\AdventOfCode2024\obj\Debug\net9
 C:\Users\kuroc\Desktop\Projects\AdventOfCode2024\AdventOfCode2024\obj\Debug\net9.0\AdventOfCode2024.genruntimeconfig.cache
 C:\Users\kuroc\Desktop\Projects\AdventOfCode2024\AdventOfCode2024\obj\Debug\net9.0\ref\AdventOfCode2024.dll
 C:\Users\kuroc\Desktop\Projects\AdventOfCode2024\AdventOfCode2024\bin\Debug\net9.0\inputs\day1.txt
+C:\Users\kuroc\Desktop\Projects\AdventOfCode2024\AdventOfCode2024\obj\Debug\net9.0\AdventOfCode2024.sourcelink.json
